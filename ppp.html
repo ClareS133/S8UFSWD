@@ -1,37 +1,40 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- This is the main HTML file for the portfolio website. It includes sections for About, Projects, and Contact. The navigation links allow users to jump to different sections of the page. The Projects section showcases three programming projects with descriptions and links to their respective GitHub repositories. The Contact section provides contact details and a form for users to send messages. -->
 <html lang="en">
   <head>
     <meta char set="utf-8">
     <name="viewport" content="width=device-with, inotial scale=1.0">
-    <title>Clare Spencer | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+    <title><h1>Clare Spencer | Portfolio</h1></title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file for styling the portfolio website, this includes font, colour scheme, layout. -->
+  </head> <!-- Styles have been chosen for a modern, clean look with a focus on readability and user experience. -->
 
   <body>
 
-    <!-- Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a> <!-- The skip link allows users to bypass the navigation and jump directly to the main content of the page. This is especially useful for users who rely on screen readers or keyboard navigation. -->
+
+    <!-- Navigation --> <!-- The navigation bar at the top of the page allows users to easily navigate to different sections of the portfolio website. It includes links to the About, Projects, and Contact sections. -->
     <header class="site-header">
-      <nav>
+      <nav aria-label="Main navigation"> <!-- The navigation element is used to group the navigation links together and provide a label for assistive technologies. -->
         <ul class="nav-links">
-          <li><a href="about">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
+    <main id="main-content"> <!-- The main content of the portfolio website is contained within the <main> element. It includes sections for About, Projects, and Contact. Each section is styled with CSS to give clear structure for assistive technologies. -->
 <!-- About Section -->
 <section id="about" class="section">
   <h1>About Clare</h1>
 
   <div class="about-wrapper">
     <div class="about-image">
-      <!-- Placeholder for photo -->
-      <div class="image-placeholder!>Photo</div>
+      <img src="image.png" alt="Portrait of Clare Spencer" class="image">
     </div>
 
     <div class="about-text">
-      <p>Short overview here(WIP). Place holder for bio content.</p>
+      <p>Trainee in Full Stack Development.</p>
+    </div>
   </div>
 </section>
 
@@ -40,11 +43,32 @@
         <h2>Programming Projects</h2>
 
         <div class="project-grid">
-            <div class="project-card">Project 1</div>
-            <div class="project-card">Project 2</div>
-            <div class="project-card">Project 3</div>
+            <div class="project-card">
+        <h3>Project 1: Personal Portfolio Page</h3>
+        <p>A clean, accessible portfolio website built with HTML and CSS.  
+        Includes an About section, project showcase, and contact form.</p>
+        <a href="https://github.com/ClareS133/S8UFSWD/week-one" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+            <div class="project-card">
+        <h3>Project 2: FloraFindr</h3>
+        <p>A team project demonstrating team work skills and GitHub collaboration. We developed a plant identification app built with Semantic HTML, JavaScript and CSS and incorporated a 3rd party API, iNaturalist.  
+        Allows users to search for details about specificplants. Includes a wireframe and README.md.</p>
+        <a href="https://github.com/acmainier/florafindr" target="_blank">
+            View on GitHub
+        </a>
+    </div>
+            <div class="project-card">
+        <h3>Project 3: Login</h3>
+        <p>A simple login application built with Python.  
+        Includes user authentication and session management.</p>
+        <a href="https://github.com/ClareS133/My_new_repo_CS" target="_blank">
+            View on GitHub
+        </a>
+    </div>
         </div>
-    </section>
+    </section></main>
 
 <!-- Contact Section -->
     <section id="contact" class="section">
@@ -53,11 +77,12 @@
         <div class="contact-wrapper">
 
             <div class="contact-details">
-                <p>Email: yourname@example.com</p>
+                <p>Email: clarespencer71@hotmail.com</p>
                 <p>Location: Chesterfield, UK</p>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" aria-labelledby="contact-heading">
+                 <h3 id="contact-heading">Send me a message</h3>
                 <label for="name">Name</label>
                 <input id="name" type="text" required>
 
